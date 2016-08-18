@@ -1,5 +1,17 @@
 # General
 
+## Structure
+
+The application is split into two parts. A REST API written with Java +
+Spring, and a front-end web application written with React.js. The
+backend application is built using Maven, while the front-end is built 
+using webpack. You shouldn't need to download any of Maven, node, 
+webpack etc. manually. I've included a Maven wrapper under .mvn and a 
+script called mvnw that (provided they work!) will fetch a version of 
+Maven for you to carry out the build. Part of the Maven build then 
+includes locally downloading node, npm, webpack etc. and triggering the 
+front-end build (so you shouldn't have to worry about any of this).
+
 ## My specs while developing
 
 java version "1.8.0_51"
@@ -10,36 +22,40 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.51-b03, mixed mode)
 
 javac 1.8.0_51
 
-These exact specs shouldn't be necessary to run the application, some
-version of Java 8 is required though.
+Any version of Java 8 should be good enough to run the application, so
+your specs don't have to match these exactly :)
 
-## Building and running
+## Installing and running
 
-The project is built with Maven. A wrapper has been included for Maven
-so that you won't have to download maven if you don't want to (provided
-the wrapper works!). To run, clone the project and cd into its working 
-directory. From here it should simply be a case of running:
+To get the source code for the project run:
 
 ```
-    ./mvnw spring-boot:run
+git clone https://github.com/Adam-T-Wright/test.git <your_directory>
 ```
 
-Then if you go to http://localhost:8080/ you should be able to make use
-of the site. 
-
-The backend has a fairly comprehensive test suite, if you want to run
-the tests while building, run:
+where '<your_directory>' is the directory you wish to clone into. Then 
+move into this directory:
 
 ```
-    ./mvnw package
+cd <your_directory>
+```
+ 
+From here there are a couple of ways to go about running the 
+application. The fastest way is as follows:
+
+```
+./mvnw spring-boot:run
 ```
 
-This will generate a jar file under the generated 'target' directory
-that can be ran with:
+However, if you wish to carry out a full build with tests included:
 
 ```
-    java -jar <jar_name_here>
+./mvnw package
+java -jar target/product-0.0.1-SNAPSHOT.jar
 ```
+
+Once deployed, visiting http://localhost:8080/ should yield the 
+front-end web application.
 
 ## Other information
 
@@ -48,15 +64,14 @@ store data (this database is populated at startup using Spring's
 CommandLineRunner). I don't believe this should cause any issues, but
 if you do run into any at the database level this may be relevant.
 
-In addition, the backend also makes use of the
-Lombok library which provides a way to remove boilerplate such as
-getters/setters via annotations. If you use an IDE you will likely have
-to do some minor configuration for it to play nicely with Lombok. This
-is fairly straightforward for both Eclipse and IntelliJ. IntelliJ 
-should tell you what to do (enable annotation processing and download 
-the Lombok plugin), I'm afraid I'm not too sure for Eclipse but I 
-imagine it will be a similar process.
+Additionally, in the brief two services are discussed. One is the
+location service that takes a customer id and returns a location id.
+The other is the catalogue service that takes a location id and returns
+products available for the location with that id. The backend has 
+endpoints for both of these services, however, I have an additional one 
+that effectively rolls both of these operations into one ("/catalogue"). 
+This is just so that I only have to make on call from the front-end.
 
 Thanks,
 
-Adam :)
+Adam
