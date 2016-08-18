@@ -72,6 +72,9 @@ endpoints for both of these services, however, I have an additional one
 that effectively rolls both of these operations into one ("/catalogue"). 
 This is just so that I only have to make on call from the front-end.
 
+The front-end was tested in both Safari and Chrome (relatively old 
+versions),
+
 Thanks,
 
 Adam
