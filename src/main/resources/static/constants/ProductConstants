@@ -1,0 +1,7 @@
+var keyMirror = require('keymirror');
+
+module.exports = keyMirror({
+    RECEIVE_PRODUCTS: null,
+    SELECT_PRODUCT: null,
+    DESELECT_PRODUCT:null
+});
