@@ -30,10 +30,10 @@ your specs don't have to match these exactly :)
 To get the source code for the project run:
 
 ```
-git clone https://github.com/Adam-T-Wright/test.git <your_directory>
+git clone https://github.com/Adam-T-Wright/test.git your_directory/
 ```
 
-where '<your_directory>' is the directory you wish to clone into. Then 
+where 'your_directory/' is the directory you wish to clone into. Then 
 move into this directory:
 
 ```
