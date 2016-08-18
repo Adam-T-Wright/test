@@ -37,7 +37,7 @@ where 'your_directory/' is the directory you wish to clone into. Then
 move into this directory:
 
 ```
-cd <your_directory>
+cd your_directory/
 ```
  
 From here there are a couple of ways to go about running the 
