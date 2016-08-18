@@ -79,6 +79,14 @@ I assume I have the customer's id stored in localStorage in
 the front-end application (this can be thought of as having come from a 
 response object when logging in).
 
+If there is ever an error on the backend e.g. a customer with the id 
+specified is not found, suitable responses are sent to the front-end. 
+The current front-end does not yet handle these errors (they shouldn't 
+occur anyway given the way the application is initialized), but they are
+returned by the backend. To see this consider contacting 
+http://localhost:808/api/customers/2/catalogue once the application has
+been deployed.
+
 Thanks,
 
 Adam
