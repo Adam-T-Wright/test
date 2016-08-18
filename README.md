@@ -84,7 +84,7 @@ specified is not found, suitable responses are sent to the front-end.
 The current front-end does not yet handle these errors (they shouldn't 
 occur anyway given the way the application is initialized), but they are
 returned by the backend. To see this consider contacting 
-http://localhost:808/api/customers/2/catalogue once the application has
+http://localhost:8080/api/customers/2/catalogue once the application has
 been deployed.
 
 Thanks,
