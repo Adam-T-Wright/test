@@ -13,7 +13,7 @@ function loadProductData(products) {
 }
 
 function setSelected(product, selected) {
-    _products.map(prod => {
+    _products = _products.map(prod => {
         if (prod.id === product.id) {
             prod.selected = selected;
         }

@@ -64,7 +64,7 @@ store data (this database is populated at startup using Spring's
 CommandLineRunner). I don't believe this should cause any issues, but
 if you do run into any at the database level this may be relevant.
 
-Additionally, in the brief two services are discussed. One is the
+In the brief two services are discussed. One is the
 location service that takes a customer id and returns a location id.
 The other is the catalogue service that takes a location id and returns
 products available for the location with that id. The backend has 
@@ -73,7 +73,11 @@ that effectively rolls both of these operations into one ("/catalogue").
 This is just so that I only have to make on call from the front-end.
 
 The front-end was tested in both Safari and Chrome (relatively old 
-versions),
+versions). 
+
+I assume I have the customer's id stored in localStorage in
+the front-end application (this can be thought of as having come from a 
+response object when logging in).
 
 Thanks,
 

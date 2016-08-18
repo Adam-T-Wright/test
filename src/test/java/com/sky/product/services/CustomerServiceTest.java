@@ -41,12 +41,9 @@ public class CustomerServiceTest {
     @Mock
     ProductRepository productRepository;
 
-    private MockMvc mockMvc;
-
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(customerService).build();
     }
 
     @Test

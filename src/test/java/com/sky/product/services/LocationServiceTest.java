@@ -40,16 +40,13 @@ public class LocationServiceTest {
     @Mock
     ProductRepository productRepository;
 
-    private MockMvc mockMvc;
-
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(locationService).build();
     }
 
     @Test
-    public void testSuccessGetCustomerCatalogue() {
+    public void testSuccessGetProductsForLocation() {
         Location location = new Location();
         location.addProduct(new Product());
 
