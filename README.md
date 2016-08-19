@@ -1,3 +1,9 @@
+# Contributors
+
+You can see that this repo has 2 contributors. Both accounts making 
+contributions belong to me; I was intially pushing to a repo with my 
+personal account (rather informal).
+
 # General
 
 ## Structure
@@ -70,7 +76,7 @@ The other is the catalogue service that takes a location id and returns
 products available for the location with that id. The backend has 
 endpoints for both of these services, however, I have an additional one 
 that effectively rolls both of these operations into one ("/catalogue"). 
-This is just so that I only have to make on call from the front-end.
+This is just so that I only have to make one call from the front-end.
 
 The front-end was tested in both Safari and Chrome (relatively old 
 versions). 
